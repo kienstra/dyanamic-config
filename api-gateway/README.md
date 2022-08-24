@@ -1,1 +1,1 @@
-Trivial file to test whether editing this adds the parameter to the `continue_config.yml`.
+A trivial file to test whether editing this adds the parameter to the `continue_config.yml`.
