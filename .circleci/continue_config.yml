@@ -1,0 +1,21 @@
+version: 2.1
+
+parameters:
+  api-gateway:
+    type: boolean
+    default: false
+
+jobs:
+  foo:
+    executor: cimg/base
+    steps:
+      - when:
+          condition: << pipeline.parameters.api-gateway >>
+          steps:
+            - checkout
+            - run: echo "The job for api-gateway is runing"
+
+workflows:
+  build-run:
+    jobs:
+      - foo
