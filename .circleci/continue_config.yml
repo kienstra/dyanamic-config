@@ -7,7 +7,8 @@ parameters:
 
 jobs:
   foo:
-    executor: cimg/base:2022.08
+    docker:
+      image: cimg/base:2022.08
     steps:
       - when:
           condition: << pipeline.parameters.api-gateway >>
